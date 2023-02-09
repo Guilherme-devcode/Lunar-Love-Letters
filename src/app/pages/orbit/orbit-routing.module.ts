@@ -13,16 +13,19 @@ const routes: Routes = [
         path: 'home',
         redirectTo: 'home',
         pathMatch: 'full',
+        data: { animation: 'HomePage' }
       },
     ],
   },
   {
     path: 'earth-moon',
     component: EarthAndMoonComponent,
+    data: { animation: 'HomePage' }
   },
   {
     path: 'earth',
     component: EarthComponent,
+    data: { animation: 'AboutPage' }
   },
 ];
 

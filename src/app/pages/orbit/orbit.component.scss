@@ -165,6 +165,45 @@ body {
   background-size: cover;
   /*perspective: 4000;*/
 }
+.title {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  font-size: 1.8rem !important;
+  z-index: 10000000 !important;
+  opacity: 0 !important;
+  color: white !important;
+  transform: translateY(20px) !important;
+  transition: all 1s ease-in-out !important;
+}
+
+.monologue {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  font-size: .9rem !important;
+  z-index: 10000000 !important;
+  opacity: 0 !important;
+  color: white !important;
+  transform: translateY(-10px) !important;
+  transition: all 10s ease-in-out !important;
+}
+.life{
+  margin: 0;
+
+}
+.monologue.show {
+  opacity: 1 !important;
+  transform: translateY(-80px) !important;
+}
+
+.title.show {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
 
 #solar-system {
   position: absolute;
@@ -404,7 +443,7 @@ body {
 }
 
 .zoom-large.view-3D .scale-stretched #solar-system {
-  font-size: 62%;
+  font-size: 100%;
 }
 
 .zoom-large.view-2D .scale-d #solar-system {
@@ -1492,14 +1531,6 @@ dl.infos dd span:after {
 .uranus #uranus.orbit,
 .neptune #neptune.orbit {
   border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-.hide-UI h1,
-.hide-UI #data,
-.hide-UI dl.infos,
-.hide-UI #controls {
-  opacity: 0 !important;
-  margin-top: -30px;
 }
 
 .hide-UI #data {

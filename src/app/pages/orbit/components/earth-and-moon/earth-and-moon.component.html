@@ -1,4 +1,17 @@
 <body>
+  <h1 class="title" [ngClass]="{'show': showTitle}">A formação da Lua é um evento complexo e ainda não completamente
+    compreendido pelos cientistas, mas a teoria mais
+    aceita é a de que a Lua se formou a partir de uma colisão entre a Terra e um objeto do tamanho de Marte há cerca de
+    4,5 bilhões de anos. Desde então, a Lua tem sido uma presença constante no céu noturno da Terra, influenciando as
+    marés e a vida na Terra
+    de várias maneiras.
+    <br>
+    <br>
+    Assim como a Lua, você consegue ser presente mesmo estando longe, consegue me fazer companhia mesmo a 91 km de
+    distância. Sem você, meu amor, eu estaria cego e sem enxergar o amor único e especial que somente você pode me
+    oferecer.
+  </h1>
   <div [routerLink]="['/earth']" style="cursor: pointer;" class="earth"></div>
   <div class="moon"></div>
+  <h1 class="click-on-moon" [ngClass]="{'show': showClick}">Clique na Terra</h1>
 </body>
