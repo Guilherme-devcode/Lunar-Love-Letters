@@ -60,7 +60,7 @@
     <p>Faltam {{ days }} dias, {{ hours }} horas, {{ minutes }} minutos e {{ seconds }} segundos para o nosso próximo
       aniversário de namoro!</p>
     <h3>Question</h3>
-    <div class="container">
+    <div (click)="isOpen = !isOpen" [ngClass]="isOpen ? 'active' :''" class="container">
       <div class="envelope"></div>
       <div class="card">
         <h1 class="message">Te amo!</h1>

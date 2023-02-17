@@ -15,6 +15,7 @@ export class EarthComponent implements OnInit {
   public seconds: number = 0;
   public anniversaryDay: number = 12; // Dia do aniversário de namoro
   public diff: number = 0;
+  public isOpen: boolean = false;
 
   ngOnInit(): void {
     let today = new Date();
