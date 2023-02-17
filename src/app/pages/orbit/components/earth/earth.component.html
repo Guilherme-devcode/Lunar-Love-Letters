@@ -1,14 +1,4 @@
 <body>
-
-  <header class="header">
-    <a href="#" class="logo">Logo</a>
-    <ul class="nav">
-      <li><a href="#about">About</a></li>
-      <li><a href="#about">Works</a></li>
-      <li><a href="#about">Contact</a></li>
-    </ul>
-  </header>
-
   <section class="home-section">
     <img src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/stars.png"
       alt="Stars overlay" id="stars">
@@ -16,55 +6,57 @@
       id="moon">
     <img src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/mountains_back.png"
       alt="Mountains back" id="mountains_back">
-    <a href="#about" id="btn-letsgo">Let's go!</a>
     <img src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/mountains_front.png"
       alt="Mountains front" id="mountains_front">
   </section>
 
   <section class="about-section" id="about">
-    <h2>What is a parallax?</h2>
+    <h2 style="text-align: center;">Our Moments Together</h2>
+    <carousel [isAnimated]="true" [itemsPerSlide]="1">
+      <slide style="height: 100%;" class="h-100">
+        <img src="assets/imgs/photo1.jpg" alt="first slide" class="slide h-100">
+      </slide>
+      <slide style="height: 100%;" class="h-100">
+        <img src="assets/imgs/photo2.jpeg" alt="second slide" class="slide h-100">
+      </slide>
+      <slide style="height: 100%;" class="h-100">
+        <img src="assets/imgs/photo3.jpg" alt="third slide" class="slide h-100">
+      </slide>
+      <slide style="height: 100%;" class="h-100">
+        <img src="assets/imgs/photo4.PNG" alt="third slide" class="slide h-100">
+      </slide>
+      <slide style="height: 100%;" class="h-100">
+        <img src="assets/imgs/photo5.jpeg" alt="second slide" class="slide h-100">
+      </slide>
+      <slide style="height: 100%;" class="h-100">
+        <img src="assets/imgs/photo6.jpeg" alt="second slide" class="slide h-100">
+      </slide>
+      <slide style="height: 100%;" class="h-100">
+        <img src="assets/imgs/photo7.jpeg" alt="second slide" class="slide h-100">
+      </slide>
+    </carousel>
     <p>
-      The parallax scrolling allows the user to perceive an impression of depth. The website appears as a 3D
-      animation that scrolls down the page. This operational concept is particularly well adapted to
-      storytelling,
-      as the reading of the contents is encouraged by the scrolling effects, animations and advertising
-      displays.
-      The parallax scrolling is also found in web design under the terms parallax website, scrolling website
-      or
-      parallax web design.
+      Nossos momentos juntos me fazem acreditar que o amor verdadeiro existe, e que é possível encontrar alguém que
+      complemente nossa vida de uma maneira única e especial. Você é essa pessoa para mim, e sou eternamente grato por
+      tê-la ao meu lado.
+      <br>
+      <br>
+      Com você, sinto-me seguro para ser eu mesmo e sei que posso contar com você para me apoiar em todos os momentos,
+      sejam eles bons ou ruins. Você me inspira a ser uma pessoa melhor, e cada dia ao seu lado me faz perceber o quanto
+      sou sortudo por ter você em minha vida.
+      <br>
+      <br>
+      Amo cada segundo que passamos juntos, e mal posso esperar para criar muitas outras memórias incríveis ao seu lado.
+      Obrigado por ser a pessoa maravilhosa que é, e por me permitir ser parte de sua vida. Você é tudo para mim.
     </p>
+    <h3>
+      Our Date
+    </h3>
     <p>
-      The term parallax scrolling is used to describe websites whose operating concept differs significantly
-      from
-      conventional navigation menus: websites with parallax scrolling are operated using the scroll function
-      of
-      the mouse. If the user scrolls through the website, the elements of the website move at different rates.
-      A
-      background image moves slowly, while images or graphic elements in the foreground move faster.
-    </p>
-    <h3>General information</h3>
-    <p>
-      Parallax Scrolling works with what is called parallax scrolling. When an observer moves parallel to two
-      objects, the objects appear to move at different speeds. The closer object seems to move faster, the one
-      further away slower. This effect of perceptual psychology gives the observer a particular impression of
-      depth, because the light reflections of the object near him are perceived more quickly by the retina.
-      The
-      human brain processes these stimuli in such a way that the space represented is perceived as if it were
-      in
-      3D.
-    </p>
-    <p>
-      The impact of parallax scrolling is important in geometry, astronomy, photography and metrology. In 2D
-      video
-      games, parallax is used to create depth and to give orientation to the player. In recent years, the
-      parallax
-      scrolling effect is also used in web design. The objective is to improve the registration of the
-      presented
-      information and to design the website in an interactive way. Users are then expected to remember the
-      range
-      of information based on the presentation and find the functionality of the website enjoyable (Joy of
-      use).
-    </p>
+    <p *ngIf="getYearsAndMonthsSinceStart().years > 0">Nos amando há {{ getYearsAndMonthsSinceStart().years }}
+      anos e {{ getYearsAndMonthsSinceStart().months }} meses.</p>
+    <p *ngIf="getYearsAndMonthsSinceStart().years == 0">Nos amando há {{ getYearsAndMonthsSinceStart().months
+      }} meses.</p>
     <h3>Functionality</h3>
     <p>
       Parallax scrolling can be created in different ways on websites. In general, background images and

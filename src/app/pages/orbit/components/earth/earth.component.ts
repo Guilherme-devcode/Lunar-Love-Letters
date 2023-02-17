@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-earth',
@@ -7,6 +8,7 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 })
 export class EarthComponent implements OnInit {
   constructor() {}
+  startDate: moment.Moment = moment('2022-07-12');
 
   ngOnInit(): void {}
 
@@ -26,5 +28,17 @@ export class EarthComponent implements OnInit {
     mountains_front.style.top = value * 0 + 'px';
     btn.style.marginTop = value * 1 + 'px';
     header.style.top = value * 0.5 + 'px';
+  }
+
+  getYearsAndMonthsSinceStart(): { years: number; months: number } {
+    const currentDate = moment();
+    const diff = currentDate.diff(this.startDate, 'months');
+    if (diff < 12) {
+      return { years: 0, months: diff };
+    } else {
+      const years = Math.floor(diff / 12);
+      const months = diff % 12;
+      return { years, months };
+    }
   }
 }
