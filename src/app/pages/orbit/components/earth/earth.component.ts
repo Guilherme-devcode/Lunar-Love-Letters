@@ -8,7 +8,7 @@ import * as moment from 'moment';
 })
 export class EarthComponent implements OnInit {
   constructor() {}
-  startDate: moment.Moment = moment('2022-07-12');
+  startDate: moment.Moment = moment('2022-08-12');
   public days: number = 0;
   public hours: number = 0;
   public minutes: number = 0;

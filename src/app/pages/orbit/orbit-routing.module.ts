@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OrbitComponent } from './orbit.component';
+import { GamesComponent } from '../games/games/games.component';
 import { EarthAndMoonComponent } from './components/earth-and-moon/earth-and-moon.component';
 import { EarthComponent } from './components/earth/earth.component';
+import { OrbitComponent } from './orbit.component';
 
 const routes: Routes = [
   {
@@ -13,19 +14,24 @@ const routes: Routes = [
         path: 'home',
         redirectTo: 'home',
         pathMatch: 'full',
-        data: { animation: 'HomePage' }
+        data: { animation: 'HomePage' },
       },
     ],
   },
   {
     path: 'earth-moon',
     component: EarthAndMoonComponent,
-    data: { animation: 'HomePage' }
+    data: { animation: 'HomePage' },
   },
   {
     path: 'earth',
     component: EarthComponent,
-    data: { animation: 'AboutPage' }
+    data: { animation: 'AboutPage' },
+  },
+  {
+    path: 'games',
+    component: GamesComponent,
+    data: { animation: 'AboutPage' },
   },
 ];
 

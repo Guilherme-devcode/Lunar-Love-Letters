@@ -1,0 +1,157 @@
+<!-- HTML Template -->
+<div class="container-games">
+  <div
+    class="header-content w-100 d-flex justify-content-center align-items-center"
+  >
+    <img
+      *ngIf="currentIframe === 'lovequest'"
+      id="logo-lovequest"
+      src="assets/imgs/loveQuest.png"
+      alt=""
+    />
+    <img
+      *ngIf="currentIframe === 'streetfighter'"
+      id="logo-streetfighter"
+      src="assets/imgs/streetfighter-logo.png"
+      alt=""
+    />
+    <img
+      *ngIf="currentIframe === 'kirby'"
+      id="logo-kirby"
+      src="assets/imgs/kirby-logo.png"
+      alt=""
+    />
+    <img
+      *ngIf="currentIframe === 'metalSlug'"
+      id="logo-metalslug"
+      src="assets/imgs/metalslug-logo.png"
+      alt=""
+    />
+    <img
+      *ngIf="currentIframe === 'teenageturtles'"
+      id="logo-turtles"
+      src="assets/imgs/tartarugas-logo.png"
+      alt=""
+    />
+  </div>
+
+  <div
+    class="iframe-container d-flex flex-column w-100 d-flex justify-content-center align-items-center"
+  >
+    <iframe
+      class="mt-5"
+      *ngIf="currentIframe === 'lovequest'"
+      src="https://love-quest.vercel.app/"
+      width="800"
+      height="600"
+      frameborder="0"
+    ></iframe>
+    <iframe
+      *ngIf="currentIframe === 'teenageturtles'"
+      src="https://www.retrogames.cc/embed/10266-teenage-mutant-ninja-turtles-us-4-players-set-1.html"
+      width="600"
+      height="450"
+      frameborder="no"
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      scrolling="no"
+    ></iframe>
+    <iframe
+      *ngIf="currentIframe === 'metalSlug'"
+      src="https://www.retrogames.cc/embed/9170-metal-slug-x-super-vehicle-001-ngm-2500-ngh-2500.html"
+      width="600"
+      height="450"
+      frameborder="no"
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      scrolling="no"
+    ></iframe>
+    <iframe
+      *ngIf="currentIframe === 'kirby'"
+      src="https://www.retrogames.cc/embed/19385-kirby-and-the-amazing-mirror-e-rising-sun.html"
+      width="600"
+      height="450"
+      frameborder="no"
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      scrolling="no"
+    ></iframe>
+    <iframe
+      *ngIf="currentIframe === 'streetfighter'"
+      src="https://www.retrogames.cc/embed/9967-street-fighter-alpha-2-960430-usa.html"
+      width="600"
+      height="450"
+      frameborder="no"
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      scrolling="no"
+    ></iframe>
+    <img width="300px" src="assets/imgs/ourgames.png" alt="" />
+    <carousel class="mt-2" [isAnimated]="true" [itemsPerSlide]="1">
+      <slide
+        id="metalSlug"
+        style="height: 100%; cursor: pointer"
+        class="h-100"
+        (click)="setIframe('metalSlug')"
+      >
+        <img
+          src="assets/imgs/metalSlug.jpg"
+          alt="first slide"
+          class="slide h-100"
+        />
+      </slide>
+      <slide
+        id="kirby"
+        style="height: 100%; cursor: pointer"
+        class="h-100"
+        (click)="setIframe('kirby')"
+      >
+        <img
+          src="assets/imgs/kirby.jpg"
+          alt="first slide"
+          class="slide h-100"
+        />
+      </slide>
+      <slide
+        id="streetfighter"
+        style="height: 100%; cursor: pointer"
+        class="h-100"
+        (click)="setIframe('streetfighter')"
+      >
+        <img
+          src="assets/imgs/streetfighter.jpg"
+          alt="first slide"
+          class="slide h-100"
+        />
+      </slide>
+      <slide
+        id="teenageturtles"
+        style="height: 100%; cursor: pointer"
+        class="h-100"
+        (click)="setIframe('teenageturtles')"
+      >
+        <img
+          src="assets/imgs/tartarugas.jpg"
+          alt="first slide"
+          class="slide h-100"
+        />
+      </slide>
+      <slide
+        id="lovequest"
+        style="height: 100%; cursor: pointer"
+        class="h-100"
+        (click)="setIframe('lovequest')"
+      >
+        <img
+          src="assets/imgs/lovequest.jfif"
+          alt="first slide"
+          class="slide h-100"
+        />
+      </slide>
+    </carousel>
+  </div>
+</div>

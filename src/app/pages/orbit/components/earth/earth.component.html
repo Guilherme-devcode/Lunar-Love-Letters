@@ -1,70 +1,121 @@
 <body>
   <section class="home-section">
-    <img src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/stars.png"
-      alt="Stars overlay" id="stars">
-    <img src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/moon.png" alt="Moon"
-      id="moon">
-    <img src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/mountains_back.png"
-      alt="Mountains back" id="mountains_back">
-    <img src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/mountains_front.png"
-      alt="Mountains front" id="mountains_front">
+    <img
+      src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/stars.png"
+      alt="Stars overlay"
+      id="stars"
+    />
+    <img
+      src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/moon.png"
+      alt="Moon"
+      id="moon"
+    />
+    <img
+      src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/mountains_back.png"
+      alt="Mountains back"
+      id="mountains_back"
+    />
+    <img
+      src="https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/mountains_front.png"
+      alt="Mountains front"
+      id="mountains_front"
+    />
   </section>
 
   <section class="about-section" id="about">
-    <h2 style="text-align: center;">Our Moments Together</h2>
+    <h2 style="text-align: center">Our Moments Together</h2>
     <carousel [isAnimated]="true" [itemsPerSlide]="1">
-      <slide style="height: 100%;" class="h-100">
-        <img src="assets/imgs/photo1.jpg" alt="first slide" class="slide h-100">
+      <slide style="height: 100%" class="h-100">
+        <img
+          src="assets/imgs/photo1.jpg"
+          alt="first slide"
+          class="slide h-100"
+        />
       </slide>
-      <slide style="height: 100%;" class="h-100">
-        <img src="assets/imgs/photo2.jpeg" alt="second slide" class="slide h-100">
+      <slide style="height: 100%" class="h-100">
+        <img
+          src="assets/imgs/photo2.jpeg"
+          alt="second slide"
+          class="slide h-100"
+        />
       </slide>
-      <slide style="height: 100%;" class="h-100">
-        <img src="assets/imgs/photo3.jpg" alt="third slide" class="slide h-100">
+      <slide style="height: 100%" class="h-100">
+        <img
+          src="assets/imgs/photo3.jpg"
+          alt="third slide"
+          class="slide h-100"
+        />
       </slide>
-      <slide style="height: 100%;" class="h-100">
-        <img src="assets/imgs/photo4.PNG" alt="third slide" class="slide h-100">
+      <slide style="height: 100%" class="h-100">
+        <img
+          src="assets/imgs/photo4.PNG"
+          alt="third slide"
+          class="slide h-100"
+        />
       </slide>
-      <slide style="height: 100%;" class="h-100">
-        <img src="assets/imgs/photo5.jpeg" alt="second slide" class="slide h-100">
+      <slide style="height: 100%" class="h-100">
+        <img
+          src="assets/imgs/photo5.jpeg"
+          alt="second slide"
+          class="slide h-100"
+        />
       </slide>
-      <slide style="height: 100%;" class="h-100">
-        <img src="assets/imgs/photo6.jpeg" alt="second slide" class="slide h-100">
+      <slide style="height: 100%" class="h-100">
+        <img
+          src="assets/imgs/photo6.jpeg"
+          alt="second slide"
+          class="slide h-100"
+        />
       </slide>
-      <slide style="height: 100%;" class="h-100">
-        <img src="assets/imgs/photo7.jpeg" alt="second slide" class="slide h-100">
+      <slide style="height: 100%" class="h-100">
+        <img
+          src="assets/imgs/photo7.jpeg"
+          alt="second slide"
+          class="slide h-100"
+        />
       </slide>
     </carousel>
     <p>
-      Nossos momentos juntos me fazem acreditar que o amor verdadeiro existe, e que é possível encontrar alguém que
-      complemente nossa vida de uma maneira única e especial. Você é essa pessoa para mim, e sou eternamente grato por
+      Nossos momentos juntos me fazem acreditar que o amor verdadeiro existe, e
+      que é possível encontrar alguém que complemente nossa vida de uma maneira
+      única e especial. Você é essa pessoa para mim, e sou eternamente grato por
       tê-la ao meu lado.
-      <br>
-      <br>
-      Com você, sinto-me seguro para ser eu mesmo e sei que posso contar com você para me apoiar em todos os momentos,
-      sejam eles bons ou ruins. Você me inspira a ser uma pessoa melhor, e cada dia ao seu lado me faz perceber o quanto
-      sou sortudo por ter você em minha vida.
-      <br>
-      <br>
-      Amo cada segundo que passamos juntos, e mal posso esperar para criar muitas outras memórias incríveis ao seu lado.
-      Obrigado por ser a pessoa maravilhosa que é, e por me permitir ser parte de sua vida. Você é tudo para mim.
+      <br />
+      <br />
+      Com você, sinto-me seguro para ser eu mesmo e sei que posso contar com
+      você para me apoiar em todos os momentos, sejam eles bons ou ruins. Você
+      me inspira a ser uma pessoa melhor, e cada dia ao seu lado me faz perceber
+      o quanto sou sortudo por ter você em minha vida.
+      <br />
+      <br />
+      Amo cada segundo que passamos juntos, e mal posso esperar para criar
+      muitas outras memórias incríveis ao seu lado. Obrigado por ser a pessoa
+      maravilhosa que é, e por me permitir ser parte de sua vida. Você é tudo
+      para mim.
     </p>
-    <h3>
-      Our Date
-    </h3>
+    <h3>Our Date</h3>
+    <p></p>
+    <p *ngIf="getYearsAndMonthsSinceStart().years > 0">
+      Nos amando há {{ getYearsAndMonthsSinceStart().years }} anos e
+      {{ getYearsAndMonthsSinceStart().months }} meses.
+    </p>
+    <p *ngIf="getYearsAndMonthsSinceStart().years == 0">
+      Nos amando há {{ getYearsAndMonthsSinceStart().months }} meses.
+    </p>
     <p>
-    <p *ngIf="getYearsAndMonthsSinceStart().years > 0">Nos amando há {{ getYearsAndMonthsSinceStart().years }}
-      anos e {{ getYearsAndMonthsSinceStart().months }} meses.</p>
-    <p *ngIf="getYearsAndMonthsSinceStart().years == 0">Nos amando há {{ getYearsAndMonthsSinceStart().months
-      }} meses.</p>
-    <p>Faltam {{ days }} dias, {{ hours }} horas, {{ minutes }} minutos e {{ seconds }} segundos para o nosso próximo
-      aniversário de namoro!</p>
+      Faltam {{ days }} dias, {{ hours }} horas, {{ minutes }} minutos e
+      {{ seconds }} segundos para o nosso próximo aniversário de namoro!
+    </p>
     <h3>Open</h3>
-    <div (click)="isOpen = !isOpen" [ngClass]="isOpen ? 'active' :''" class="container">
+    <div
+      (click)="isOpen = !isOpen"
+      [ngClass]="isOpen ? 'active' : ''"
+      class="container"
+    >
       <div class="envelope"></div>
-      <div class="card">
-        <h1 class="message">Te amo!</h1>
-        <div class="heart"></div>
+      <div [routerLink]="['/games']" style="cursor: pointer" class="card">
+        <h1 class="message mt-4">Vamos jogar?</h1>
+        <img style="width: 60px" src="assets/imgs/game.png" alt="" />
       </div>
       <div class="cover"></div>
       <div class="lid"></div>
